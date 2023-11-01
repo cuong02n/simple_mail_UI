@@ -1,0 +1,62 @@
+<!-- res/layout/email_list_item.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/emailIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="A"
+        android:background="@drawable/my_shape"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/emailSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/emailIcon"
+        android:layout_toStartOf="@+id/emailTimestamp"
+        android:layout_toEndOf="@id/emailIcon"
+        android:text="Subject"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/emailTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="2h ago"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/emailSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailSubject"
+        android:layout_toEndOf="@id/emailIcon"
+        android:text="sender@gmail.com"
+        android:textColor="#797583"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/emailPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailSender"
+        android:layout_alignStart="@id/emailSubject"
+        android:layout_toEndOf="@id/emailIcon"
+        android:text="This is a preview of the email message."
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+</RelativeLayout>
